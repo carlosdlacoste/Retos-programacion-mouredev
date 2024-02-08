@@ -32,13 +32,13 @@ function decimalToHexadecimal(num) {
     let remainderArr = [];
     const lowerthanSixteen = num;
     while(num >= 16){
-        remainderArr.push(num % 16)
-        if(letterDic.hasOwnProperty(num)) remainderArr.push(letterDic.num)
-        // console.log(remainderArr)
-        console.log(letterDic.hasOwnProperty(`${num}`))
+        if(letterDic.hasOwnProperty(`${num % 16}`)) remainderArr.push(letterDic[`${num % 16}`])
+        else remainderArr.push(num % 16)
         num = Math.floor(num / 16)
         if(num < 16) {
-            if(letterDic.hasOwnProperty(num)) remainderArr.push(letterDic[num.toString()])
+            if(letterDic.hasOwnProperty(`${num}`)){
+                remainderArr.push(letterDic[`${num}`])
+            } 
             else remainderArr.push(num)
         }
     }
@@ -48,8 +48,8 @@ function decimalToHexadecimal(num) {
     }
     const reversedArr = remainderArr.reverse();
     const HexaArr = reversedArr.join("")
-    return parseInt(HexaArr)
+    return HexaArr
 }
 
-// console.log(decimalToOctal(500))
+console.log(decimalToOctal(500))
 console.log(decimalToHexadecimal(500))
