@@ -53,3 +53,39 @@ function decimalToHexadecimal(num) {
 
 console.log(decimalToOctal(500))
 console.log(decimalToHexadecimal(500))
+
+
+// Otra version mas corta y eficiente del mismo codigo para un numero hexadecimal 
+
+
+// const convertHexa = (n) => {
+// 	let res = "";
+// 	const hexaNums = [
+// 		"0",
+// 		"1",
+// 		"2",
+// 		"3",
+// 		"4",
+// 		"5",
+// 		"6",
+// 		"7",
+// 		"8",
+// 		"9",
+// 		"A",
+// 		"B",
+// 		"C",
+// 		"D",
+// 		"E",
+// 		"F",
+// 	];
+
+// 	while (n > 0) {
+// 		let rem = n % 16;
+// 		n = Math.floor(n / 16);
+// 		res = hexaNums[rem] + res;
+// 	}
+
+// 	return res;
+// };
+
+// console.log(convertHexa(7));
