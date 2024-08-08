@@ -14,5 +14,5 @@ var majorityElement = function(nums) {
     }
 };
 
-let nums = [3,2,3]
+let nums = [2,2,1,1,1,2,2]
 console.log(majorityElement(nums))
